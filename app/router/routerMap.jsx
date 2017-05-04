@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import {BrowserRouter as Router,Route,Switch,Redirect} from 'react-router-dom'
+import createBrowserHistory from 'history/createBrowserHistory'
 
 //redux流
 import { bindActionCreators } from 'redux'
@@ -14,6 +15,7 @@ import LocalStore from '../util/localStore'
 
 // 路由配置
 import Home from '../containers/Home'
+import City from '../containers/City'
 import NotFound from '../containers/404'
 
 
@@ -26,13 +28,15 @@ class RouterMap extends Component{
         }
     }
 	render(){
+		const history = createBrowserHistory()
 		return (
-			<Router>
+			<Router history={history}>
 			{
 				this.state.initDone
 				?	<div>
 						<Switch>
 							<Route exact path="/" component={Home}/>
+							<Route exact path="/city" component={City}/>
 							<Route component={NotFound}/>
 						</Switch>
 					</div>

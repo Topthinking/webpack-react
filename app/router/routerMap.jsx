@@ -16,6 +16,7 @@ import LocalStore from '../util/localStore'
 // 路由配置
 import Home from '../containers/Home'
 import City from '../containers/City'
+import Search from '../containers/Search'
 import NotFound from '../containers/404'
 
 
@@ -37,6 +38,7 @@ class RouterMap extends Component{
 						<Switch>
 							<Route exact path="/" component={Home}/>
 							<Route exact path="/city" component={City}/>
+							<Route path="/search/:category" component={Search}/>
 							<Route component={NotFound}/>
 						</Switch>
 					</div>

@@ -25,6 +25,18 @@ class Ad extends Component{
 	}
 	componentDidMount(){
 		const result = getAdData();
+		result.then(res=>{
+			return res.json();
+		}).then(json=>{
+			const data = json;
+			if(data.length){
+				this.setState({
+					data:data
+				})
+			}
+		}).catch(err=>{
+			console.log(err.message);
+		})
 	}
 }
 

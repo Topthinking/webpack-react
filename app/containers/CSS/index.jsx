@@ -3,7 +3,10 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 
 import Center from './subpage/center'
+import Animate from './subpage/animate'
+
 import './style.less'
+
 class CSS extends Component{
 	constructor(props) {
 	  super(props);
@@ -37,6 +40,7 @@ class CSS extends Component{
 						<div id="css-list">
 							<ul>
 								<li onClick={this.changeType.bind(this,'center','css居中')}>1.css显示居中</li>
+								<li onClick={this.changeType.bind(this,'animate','css动画')}>2.css动画</li>
 							</ul>
 						</div>	
 					  </div>
@@ -48,6 +52,9 @@ class CSS extends Component{
 		switch(this.state.type) {
 			case 'center':
 				return <Center />
+				break;
+			case 'animate':
+				return <Animate />
 				break;
 			default:
 				return <div></div>

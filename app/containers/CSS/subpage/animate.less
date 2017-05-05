@@ -1,0 +1,54 @@
+#animate{
+	.animate-list{
+		height: 300px;
+		.item{
+			width: 50px;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+			color:#fff
+		}
+	}
+}
+
+#animate1{
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid tomato;
+	position: relative;
+	.item{
+		background-color: #dfdfdf;
+		position: absolute;
+		animation:whoole 5s infinite;
+	}
+	@keyframes whoole{
+		0% {
+			left:0;
+			top:0;
+			background-color: #dfdfdf;
+		}
+		25%{
+			left:100%;
+			top:0;
+			transform:translate(-100%,0);
+			background-color: #e9203d;
+		}
+		50%{
+			left: 100%;
+			top:100%;
+			transform:translate(-100%,-100%);
+			background-color: #a1c2df;
+		}
+		75%{
+			left: 0;
+			top:100%;
+			transform:translate(0,-100%);
+			background-color: #de34a1;
+		}
+		100%{
+			top:0;
+			left: 0;
+			background-color: #dfdfdf;
+		}
+	}
+}

@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-
+import Header from '../../components/Header'
 
 import Center from './subpage/center'
 import Animate from './subpage/animate'
@@ -34,9 +34,7 @@ class CSS extends Component{
 					  	</div>
 					  </div>
 					: <div>
-						<div id="common-header">
-							<h1>CSS效果列表</h1>
-						</div>
+						<Header title="CSS效果列表"/>
 						<div id="css-list">
 							<ul>
 								<li onClick={this.changeType.bind(this,'center','css居中')}>1.css显示居中</li>

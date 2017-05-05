@@ -39,7 +39,7 @@ class RouterMap extends Component{
 						<Switch>
 							<Route exact path="/" component={Home}/>
 							<Route exact path="/city" component={City}/>
-							<Route path="/search/:category" component={Search}/>
+							<Route path="/search/" component={Search}/>
 							<Route path="/css" component={CSS}/>
 							<Route component={NotFound}/>
 						</Switch>

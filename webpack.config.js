@@ -21,7 +21,7 @@ module.exports = {
   output: {
     path: __dirname + "/build",
     filename: "[name].[chunkhash:8].js",
-    publicPath: '/'
+    publicPath: './'
   },
 
   resolve:{
@@ -60,7 +60,7 @@ module.exports = {
             },  // 限制大小5kb
             { 
               test:/\.(woff|woff2|svg|ttf|eot)($|\?)/i, 
-              loader:'file-loader?limit=5000&name=fonts/[name].[chunkhash:8].[ext]'
+              loader:'file-loader?limit=5000&name=fonts/[name].[ext]'
             } // 限制大小小于5k    
           ]
   },
@@ -78,13 +78,6 @@ module.exports = {
     // html 模板插件
     new HtmlWebpackPlugin({
         template: __dirname + '/app/index.html'
-    }),
-
-    // 定义为生产环境，编译 React 时压缩到最小
-    new webpack.DefinePlugin({
-      'process.env':{
-        'NODE_ENV': "production"
-      }
     }),
 
     // 为组件分配ID，通过这个插件webpack可以分析和优先考虑使用最多的模块，并为它们分配最小的ID

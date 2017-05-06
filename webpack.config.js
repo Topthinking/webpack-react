@@ -21,7 +21,10 @@ var deleteFolder = function(path) {
         fs.rmdirSync(path);
     }
 };
-deleteFolder('./build');
+deleteFolder('../build/script/');
+deleteFolder('../build/style/');
+deleteFolder('../build/fonts/');
+deleteFolder('../build/images/');
 
 module.exports = {
   entry: {
@@ -31,18 +34,17 @@ module.exports = {
       'react', 
       'react-dom', 
       'react-redux', 
-      'react-router-dom', 
-      'react-router', 
+      'react-router-dom',
       'redux', 
       'es6-promise', 
       'whatwg-fetch'
     ]
   },
   output: {
-    path: __dirname + "/build",
+    path:path.resolve(__dirname, '../build'),
     filename: "script/[name].[chunkhash:8].js",
     jsonpFunction:'Topthinking',
-    publicPath: "/"
+    publicPath: "/dianping/"
   },
 
   resolve:{
@@ -151,4 +153,3 @@ module.exports = {
     })
   ]
 }
-

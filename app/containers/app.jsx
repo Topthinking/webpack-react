@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import {BrowserRouter as Router,Route,Switch,Redirect} from 'react-router-dom'
+import {HashRouter as Router,Route,Switch,Redirect} from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 
 //redux流
@@ -14,6 +14,7 @@ import LocalStore from '../util/localStore'
 
 
 // 路由配置
+import Bundle from '../bundle'
 import Home from '../containers/Home'
 import City from '../containers/City'
 import Search from '../containers/Search'
@@ -21,7 +22,7 @@ import CSS from '../containers/CSS'
 import NotFound from '../containers/404'
 
 
-class RouterMap extends Component{
+class App extends Component{
 	constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
@@ -39,7 +40,7 @@ class RouterMap extends Component{
 						<Switch>
 							<Route exact path="/" component={Home}/>
 							<Route exact path="/city" component={City}/>
-							<Route path="/search/" component={Search}/>
+							<Route path="/search/:category/:keyword?" component={Search}/>
 							<Route path="/css" component={CSS}/>
 							<Route component={NotFound}/>
 						</Switch>
@@ -79,4 +80,4 @@ function mapDispatchToProps(dispatch){
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(RouterMap)
+)(App)

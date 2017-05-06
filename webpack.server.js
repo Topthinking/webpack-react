@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 
+require('./mock/server.js');
 module.exports = {
 	entry:'./app/index.jsx',
 	output:{

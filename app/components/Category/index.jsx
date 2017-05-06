@@ -29,7 +29,7 @@ class Category extends Component{
 					<ReactSwipe swipeOptions={opt}>
 						<div className='carousel-item'>
 							<ul className='clear-fix'>
-								<Link to="/search/jingdian"><li className="float-left jingdian">景点</li></Link>
+								<Link to="/search/jingdian/sa"><li className="float-left jingdian">景点</li></Link>
 	                            <Link to="/search/ktv"><li className="float-left ktv">KTV</li></Link>
 	                            <Link to="/search/gouwu"><li className="float-left gouwu">购物</li></Link>
 	                            <Link to="/search/shenghuofuwu"><li className="float-left shenghuofuwu">生活服务</li></Link>

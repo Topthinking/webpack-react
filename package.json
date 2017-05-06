@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "set NODE_ENV=dev && webpack-dev-server --config webpack.server.js",
-    "dist": "set NODE_ENV=production && webpack --config webpack.config.js --progress --colors",
-    "mock": "node --harmony ./mock/server.js"
+    "dev": "webpack-dev-server --config webpack.server.js",
+    "build": "webpack --config webpack.config.js --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -23,7 +22,6 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
-    "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-swipe": "^5.0.8",
     "redux": "^3.6.0",

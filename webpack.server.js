@@ -31,11 +31,11 @@ module.exports = {
             	loader: 'style-loader!css-loader!postcss-loader' 
             },
             { 
-            	test:/\.(png|gif|jpg|jpeg|bmp)$/i, 
+            	test:/\.(png|gif|jpg|jpeg|bmp)$/, 
             	loader:'url-loader?limit=5000' 
             },  // 限制大小5kb
             { 
-            	test:/\.(png|woff|woff2|svg|ttf|eot)($|\?)/i, 
+            	test:/\.(woff|woff2|svg|ttf|eot)($|\?)/, 
             	loader:'file-loader?limit=5000'
             } // 限制大小小于5k
 		]

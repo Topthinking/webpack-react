@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import HomeAd from '../../../components/HomeAd'
+import AdData from '../../../../mock/home/ad'
 import { getAdData } from '../../../fetch/home/home'
 
 class Ad extends Component{
@@ -26,7 +27,11 @@ class Ad extends Component{
 	componentDidMount(){
 		const result = getAdData();
 		result.then(res=>{
-			return res.json();
+			if(res.ok){
+				return res.json();				
+			}else{
+				return AdData;
+			}
 		}).then(json=>{
 			const data = json;
 			if(data.length){

@@ -1,7 +1,27 @@
-var path = require('path')
+var path = require('path');
+var fs = require('fs');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
+
+var deleteFolder = function(path) {
+    var files = [];
+    if( fs.existsSync(path) ) {
+        files = fs.readdirSync(path);
+        files.forEach(function(file,index){
+            var curPath = path + "/" + file;
+            if(fs.statSync(curPath).isDirectory()) { // recurse
+                deleteFolder(curPath);
+            } else { // delete file
+                fs.unlinkSync(curPath);
+            }
+        });
+        fs.rmdirSync(path);
+    }
+};
+deleteFolder('./build');
 
 module.exports = {
   entry: {
@@ -20,8 +40,9 @@ module.exports = {
   },
   output: {
     path: __dirname + "/build",
-    filename: "[name].[chunkhash:8].js",
-    publicPath: './'
+    filename: "script/[name].[chunkhash:8].js",
+    jsonpFunction:'Topthinking',
+    publicPath: "/"
   },
 
   resolve:{
@@ -55,48 +76,79 @@ module.exports = {
               })
             },
             { 
-              test:/\.(png|gif|jpg|jpeg|bmp)$/i, 
-              loader:'url-loader?limit=5000&name=img/[name].[chunkhash:8].[ext]' 
-            },  // 限制大小5kb
+              test:/\.(png|gif|jpg|jpeg|bmp)$/, 
+              loader:'url-loader?limit=1&name=images/[name].[hash:8].[ext]' 
+            },
             { 
-              test:/\.(woff|woff2|svg|ttf|eot)($|\?)/i, 
-              loader:'file-loader?limit=5000&name=fonts/[name].[ext]'
-            } // 限制大小小于5k    
+              test:/\.(woff|woff2|svg|ttf|eot)($|\?)/, 
+              loader:'file-loader?name=fonts/[name].[hash:8].[ext]'
+            }  
           ]
   },
 
   plugins: [
     // webpack 内置的 banner-plugin
-    new webpack.BannerPlugin("Copyright by topthinking@github.io."),
+    //new webpack.BannerPlugin("Copyright by topthinking@github.io."),
 
     new webpack.LoaderOptionsPlugin({
       options:{
-        postcss:require('autoprefixer')
+        postcss:()=>{
+          return [
+            require('autoprefixer')({
+              browsers: ['last 10 versions','ie>=8','>1% in CN']
+            })
+          ]
+        }
+      }
+    }),
+
+    // 定义为生产环境，编译 React 时压缩到最小
+    new webpack.DefinePlugin({
+      'process.env':{
+        'NODE_ENV': JSON.stringify('production')
       }
     }),
 
     // html 模板插件
     new HtmlWebpackPlugin({
-        template: __dirname + '/app/index.html'
+        template: __dirname + '/app/index.html',
+        minify:{
+            removeEmptyAttributes: true,
+            removeAttributeQuotes: true,
+            collapseBooleanAttributes: true,
+            collapseWhitespace: true
+          }
     }),
 
     // 为组件分配ID，通过这个插件webpack可以分析和优先考虑使用最多的模块，并为它们分配最小的ID
-
+    new webpack.optimize.OccurrenceOrderPlugin(),
     
+    //js代码压缩
     new webpack.optimize.UglifyJsPlugin({
         compress: {
           //supresses warnings, usually from module minification
           warnings: false
-        }
+        },
+        beautify:false,
+        comments:false
     }),
     
     // 分离CSS和JS文件
-    new ExtractTextPlugin('[name].[chunkhash:8].css'), 
+    new ExtractTextPlugin('style/[name].[chunkhash:8].css'), 
+
+    //css代码压缩
+    new OptimizeCssAssetsPlugin({
+      assetNameRegExp: /\.css$/g,
+      cssProcessor: require('cssnano'),
+      cssProcessorOptions: { discardComments: {removeAll: true } },
+      canPrint: true
+    }),
     
     // 提供公共代码
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      filename: '[name].[chunkhash:8].js'
+      filename: 'script/[name].[chunkhash:8].js'
     })
   ]
 }
+

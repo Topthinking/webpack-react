@@ -1,7 +1,8 @@
 import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as appActions from '../../actions/app'
 
 import HomeHeader from '../../components/HomeHeader'
 import Category from '../../components/Category'
@@ -25,8 +26,9 @@ class Home extends Component{
 			)
 	}
 	componentDidMount(){
-		
-		
+		this.props.appActionList.menu({
+			location:1
+		});
 	}
 }
 
@@ -38,6 +40,7 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
 	return {
+		appActionList:bindActionCreators(appActions,dispatch)
 	}
 }
 

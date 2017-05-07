@@ -1,6 +1,8 @@
 import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as appActions from '../../actions/app'
 
 import SearchHeader from '../../components/SearchHeader'
 import SearchList from './subpage/List'
@@ -20,7 +22,9 @@ class Search extends Component{
 			)
 	}
 	componentDidMount(){
-		
+		this.props.appActionList.menu({
+			location:3
+		});
 	}
 }
 
@@ -32,6 +36,7 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
 	return {
+		appActionList:bindActionCreators(appActions,dispatch)
 	}
 }
 

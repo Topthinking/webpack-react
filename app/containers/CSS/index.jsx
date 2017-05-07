@@ -1,7 +1,10 @@
 import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import Header from '../../components/Header'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as appActions from '../../actions/app'
 
+import Header from '../../components/Header'
 import Center from './subpage/center'
 import Animate from './subpage/animate'
 
@@ -46,6 +49,11 @@ class CSS extends Component{
 				</div>
 			)
 	}
+	componentDidMount(){
+		this.props.appActionList.menu({
+			location:4
+		})
+	}
 	switchState(){
 		switch(this.state.type) {
 			case 'center':
@@ -74,4 +82,18 @@ class CSS extends Component{
 	}
 }
 
-export default CSS
+function mapStateToProps(state){
+	return {
+	}
+}
+
+function mapDispatchToProps(dispatch){
+	return {
+		appActionList:bindActionCreators(appActions,dispatch)
+	}
+}
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(CSS)

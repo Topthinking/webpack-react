@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {HashRouter as Router,Route,Switch,Redirect} from 'react-router-dom'
+import createBrowserHistory from 'history/createBrowserHistory'
 
 //redux流
 import { bindActionCreators } from 'redux'
@@ -19,6 +20,7 @@ import Search from '../containers/Search'
 import CSS from '../containers/CSS'
 import Detail from '../containers/Detail'
 import NotFound from '../containers/404'
+import Footer from '../components/Footer'
 
 
 class App extends Component{
@@ -30,11 +32,12 @@ class App extends Component{
         }
     }
 	render(){
+		const history = createBrowserHistory();
 		return (
 			<Router>
 			{
 				this.state.initDone
-				?	<div>
+				?	<div id="app">
 						<Switch>
 							<Route exact path="/" component={Home}/>
 							<Route exact path="/city" component={City}/>
@@ -43,6 +46,7 @@ class App extends Component{
 							<Route path="/css" component={CSS}/>
 							<Route component={NotFound}/>
 						</Switch>
+						<Footer history={history}/>
 					</div>
 				: 	<div>正在加载...</div>
 			}

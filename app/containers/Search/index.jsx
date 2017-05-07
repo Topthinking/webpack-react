@@ -1,7 +1,8 @@
 import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { connect } from 'react-redux'
-import { match } from 'react-router-dom'
+
+import SearchHeader from '../../components/SearchHeader'
 
 class Search extends Component{
 	constructor(props) {
@@ -9,12 +10,15 @@ class Search extends Component{
 	  this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
 	}
 	render(){
-		console.log(this.props.match);
+		const params = this.props.match.params;		
 		return (
-				<h1>
-				{this.props.userinfo.cityName}
-				</h1>
+				<div>
+					<SearchHeader keyword={params.keyword} history={this.props.history}/>
+				</div>
 			)
+	}
+	componentDidMount(){
+		
 	}
 }
 

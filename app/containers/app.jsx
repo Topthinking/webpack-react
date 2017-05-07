@@ -1,7 +1,6 @@
 import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {HashRouter as Router,Route,Switch,Redirect} from 'react-router-dom'
-import createBrowserHistory from 'history/createBrowserHistory'
 
 //redux流
 import { bindActionCreators } from 'redux'
@@ -14,7 +13,6 @@ import LocalStore from '../util/localStore'
 
 
 // 路由配置
-import Bundle from '../bundle'
 import Home from '../containers/Home'
 import City from '../containers/City'
 import Search from '../containers/Search'
@@ -31,9 +29,8 @@ class App extends Component{
         }
     }
 	render(){
-		const history = createBrowserHistory()
 		return (
-			<Router history={history}>
+			<Router>
 			{
 				this.state.initDone
 				?	<div>

@@ -7,6 +7,19 @@
 		font-size: 16px;
 		line-height: 1;
 	}
+
+	.search-container{
+    	animation:run .3s linear 0s forwards;
+	}	
+
+	@keyframes run {
+		from{
+			margin-right: 0px;
+		}
+		to{
+			margin-right: 0px;
+		}
+	}
 }
 .home-header-left{
 	width: 60px;
@@ -16,23 +29,6 @@
 .home-header-middle{
 	width: auto;
 	margin: 0 30px 0 60px;
-
-	.search-container{
-		background-color: #fff;
-		border-radius: 15px;
-		overflow: hidden;
-		padding: 5px;
-		i{
-			color:#ccc !important;
-		}
-		input{
-			font-size: 14px !important;
-			font-weight: normal;
-			color:#000 !important;
-			border: 0;
-			width: 175px;
-		}
-	}
 }
 .home-header-right{
 	width: 30px;

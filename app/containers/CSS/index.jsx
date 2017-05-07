@@ -51,7 +51,7 @@ class CSS extends Component{
 	}
 	componentDidMount(){
 		this.props.appActionList.menu({
-			location:4
+			location:0
 		})
 	}
 	switchState(){

@@ -24,7 +24,7 @@ class HomeHeader extends Component{
 						</Link>
 					</div>
 					<div className="home-header-right float-right">
-						<Link to="/css">
+						<Link to="/user">
 						<i className="icon-user"></i>
 						</Link>
 					</div>

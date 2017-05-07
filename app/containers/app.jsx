@@ -18,6 +18,8 @@ import Home from '../containers/Home'
 import City from '../containers/City'
 import Search from '../containers/Search'
 import CSS from '../containers/CSS'
+import JS from '../containers/JS'
+import User from '../containers/user'
 import Detail from '../containers/Detail'
 import NotFound from '../containers/404'
 import Footer from '../components/Footer'
@@ -44,6 +46,8 @@ class App extends Component{
 							<Route path="/search/:category/:keyword?" component={Search}/>
 							<Route path="/detail/:id" component={Detail}/>
 							<Route path="/css" component={CSS}/>
+							<Route path="/js" component={JS}/>
+							<Route path="/user" component={User}/>
 							<Route component={NotFound}/>
 						</Switch>
 						<Footer history={history}/>

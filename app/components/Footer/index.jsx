@@ -11,38 +11,45 @@ class Footer extends Component{
 	  this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
 	}
 	render(){
+		const menu = this.props.app.location;
 		return (
-				<div id="common-footer">
-					<ul className="footer-list">
-						<li>
-							{
-								this.props.app.location === 1
-								? <span className="active">首页</span>
-								: <Link to="/"><span>首页</span></Link>
-							}							
-						</li>
-						<li>
-							{
-								this.props.app.location === 2
-								? <span className="active">新闻</span>
-								: <span>新闻</span>
-							}
-						</li>
-						<li>
-							{
-								this.props.app.location === 3
-								? <span className="active">发现</span>
-								: <Link to="/search/all"><span>发现</span></Link>
-							}
-						</li>
-						<li>
-							{
-								this.props.app.location === 4
-								? <span className="active">我的</span>
-								: <Link to="/css"><span>我的</span></Link>
-							}
-						</li>
-					</ul>
+				<div>
+				{
+					menu === 0
+					?   ''
+					:   <div id="common-footer">
+							<ul className="footer-list">
+								<li>
+									{
+										menu === 1
+										? <span className="active">首页</span>
+										: <Link to="/"><span>首页</span></Link>
+									}							
+								</li>
+								<li>
+									{
+										menu === 2
+										? <span className="active">新闻</span>
+										: <span>新闻</span>
+									}
+								</li>
+								<li>
+									{
+										menu === 3
+										? <span className="active">发现</span>
+										: <Link to="/search/all"><span>发现</span></Link>
+									}
+								</li>
+								<li>
+									{
+										menu === 4
+										? <span className="active">我的</span>
+										: <Link to="/user"><span>我的</span></Link>
+									}
+								</li>
+							</ul>
+					    </div>
+				}
 				</div>
 			)
 	}

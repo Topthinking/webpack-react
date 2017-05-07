@@ -3,6 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { connect } from 'react-redux'
 
 import SearchHeader from '../../components/SearchHeader'
+import SearchList from './subpage/List'
 
 class Search extends Component{
 	constructor(props) {
@@ -14,6 +15,7 @@ class Search extends Component{
 		return (
 				<div>
 					<SearchHeader keyword={params.keyword} history={this.props.history}/>
+					<SearchList keyword={params.keyword} category={params.category}/>
 				</div>
 			)
 	}

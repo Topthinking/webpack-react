@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import { getListData } from '../../../fetch/home/home'
-import HomeList from '../../../components/HomeList'
+import HomeList from '../../../components/List'
 import LoadMore from '../../../components/LoadMore'
 
 import ListData from '../../../../mock/home/list'

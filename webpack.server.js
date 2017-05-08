@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 require('./mock/server.js');
 module.exports = {
@@ -43,13 +44,24 @@ module.exports = {
 	},
 	plugins:[
 		new htmlWebpackPlugin({
+			favicon:'./app/static/images/favicon.jpg',
 			template:'./app/index.html'
 		}),
 
 		new webpack.LoaderOptionsPlugin({
 			options:{
-				postcss:require('autoprefixer')
+				postcss:()=>{
+		          return [
+		            require('autoprefixer')({
+		              browsers: ['last 10 versions','ie>=8','>1% in CN']
+		            })
+		          ]
+		        }
 			}
+		}),
+
+		new OpenBrowserPlugin({
+			url:'http://localhost:8080'
 		}),
 
 		new webpack.HotModuleReplacementPlugin()

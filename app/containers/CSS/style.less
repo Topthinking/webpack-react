@@ -5,6 +5,41 @@
     margin: 0 auto;
     margin-top: 20px;
     background-color: #fff;
+
+    pre{
+    	background: rgb(0,43,54);
+    	color: rgb(222,222,222);
+    	overflow: auto; 
+    	* {
+		  -webkit-transition: all .3s;
+		  transition: all .3s;
+		}
+		/* 文字离边框太近了 */
+		.styles-wrap {
+		  padding: .5em;
+		  border: 1px solid;
+		  margin: .5em;
+		  overflow: auto;
+		  width: 45vw; height: 90vh;
+		}
+		/* 代码高亮 */
+		.token.selector{ color: rgb(133,153,0); }
+		.token.property{ color: rgb(187,137,0); }
+		.token.punctuation{ color: yellow; }
+		.token.function{ color: rgb(42,161,152); }
+    }
+
+    .content{
+		position: absolute;
+		width: 0%;
+		height: 100%;
+		right: -100%;
+		background: rgba(168, 191, 212, 0.9);
+		transition:right 0.6s , width 0.6s ease-in-out;
+		overflow: auto;
+		overflow-x: hidden;
+		padding: 10px;
+	}
 }
 
 #css-list{

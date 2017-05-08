@@ -37,7 +37,8 @@ module.exports = {
       'react-router-dom',
       'redux', 
       'es6-promise', 
-      'whatwg-fetch'
+      'whatwg-fetch',
+      'prismjs'
     ]
   },
   output: {

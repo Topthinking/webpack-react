@@ -45,7 +45,8 @@ module.exports = {
     path:path.resolve(__dirname, '../build'),
     filename: "script/[name].[chunkhash:8].js",
     jsonpFunction:'Topthinking',
-    publicPath: "/dianping/"
+    publicPath: "/dianping/",
+    chunkFilename: "script/[name].[chunkhash:8].js"
   },
 
   resolve:{

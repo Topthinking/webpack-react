@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 

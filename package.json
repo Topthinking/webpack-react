@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Topthinking/react-webapp-dianping#readme",
   "dependencies": {
+    "bundle-loader": "^0.5.5",
     "es6-promise": "^4.1.0",
     "prismjs": "^1.6.0",
     "react": "^15.5.4",

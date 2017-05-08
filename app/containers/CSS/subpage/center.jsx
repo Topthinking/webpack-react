@@ -51,8 +51,8 @@ class Center extends Component{
 
 				let content = item.getElementsByClassName('content')[0];
 
-				content.style.right = '0%';
-				content.style.width = '100%';
+				content.style.right = '-1px';
+				content.style.width = '101%';
 
 				e.stopPropagation();
 				e.preventDefault();

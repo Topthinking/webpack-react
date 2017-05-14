@@ -25,8 +25,9 @@ react + react-router4.1 + redux + less + ES6/7 + webpack + fetch + bundle-loader
 ```
 ## 2017年5月14日
 ```
-利用webpack的bundle-loader实现代码分割，最终实现根据路由按需加载，加快用户对首屏的访问速度
-添加fastclick解决移动端300毫秒延迟
+1.利用webpack的bundle-loader实现代码分割，最终实现根据路由按需加载，加快用户对首屏的访问速度
+2.添加fastclick解决移动端300毫秒延迟
+3.实现详情页面，复用之前的列表组件和加载组件，只是样式和数据结构不一样
 ```
 ## 说明
 

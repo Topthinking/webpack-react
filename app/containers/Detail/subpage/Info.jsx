@@ -2,6 +2,8 @@ import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import { getDetail } from '../../../fetch/detail/detail'
+import DetailInfo from '../../../components/DetailInfo'
+
 import InfoData from '../../../../mock/detail/info'
 
 class Info extends Component{
@@ -17,7 +19,7 @@ class Info extends Component{
 				<div>
 					{
 						this.state.info
-						? <div>有数据</div>
+						? <DetailInfo data={this.state.info}/>
 						: <div>正在加载...</div>
 					}
 				</div>

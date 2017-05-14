@@ -21,5 +21,5 @@ render(
 			<AppContainer />
 		</HashRouter>
 	</Provider>
-	,document.getElementById("root")
+	,document.body.appendChild(document.createElement('div'))
 )

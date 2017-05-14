@@ -6,6 +6,7 @@ import * as appActions from '../../actions/app'
 
 import Header from '../../components/Header'
 import Info from './subpage/Info'
+import Comment from './subpage/Comment'
 
 class Detail extends Component{
 	constructor(props) {
@@ -18,6 +19,7 @@ class Detail extends Component{
 				<div>
 					<Header title="商户详情"/>
 					<Info id={id}/>
+					<Comment id={id}/>
 				</div>
 			)
 	}

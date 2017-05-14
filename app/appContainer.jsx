@@ -64,7 +64,10 @@ const User = (props)=>(
 
 const Detail = (props)=>(
 	<Bundle load={DetailContainer}>
-		{(Detail)=><Detail history={props.props.history}/>}
+		{(Detail)=><Detail 
+					history={props.props.history}
+					match={props.props.match}
+				/>}
 	</Bundle>
 )
 

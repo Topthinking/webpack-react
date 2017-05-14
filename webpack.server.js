@@ -8,7 +8,9 @@ module.exports = {
 	entry:'./app/index.jsx',
 	output:{
 		path:__dirname+"./public",
-		filename:'bundle.js'
+		filename: "script/[name].[hash:8].js",
+    	jsonpFunction:'Topthinking',
+    	chunkFilename: "script/[name].[chunkhash:8].js"
 	},
 	resolve:{
 		extensions:['.js','.jsx']

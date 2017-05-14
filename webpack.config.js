@@ -38,7 +38,8 @@ module.exports = {
       'redux', 
       'es6-promise', 
       'whatwg-fetch',
-      'prismjs'
+      'prismjs',
+      'fastclick'
     ]
   },
   output: {

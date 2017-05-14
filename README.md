@@ -40,4 +40,4 @@ react + react-router4.1 + redux + less + ES6/7 + webpack + fetch + bundle-loader
 [demo](http://topthinking.github.io/dianping/)（请用chrome的手机模式预览）
 
 ### 移动端扫描下方二维码
-![](https://github.com/topthinking/react-webapp-dianping/tree/master/doc/images/demo_code.png)
+![](https://github.com/Topthinking/react-webapp-dianping/blob/master/doc/images/demo_code.png)

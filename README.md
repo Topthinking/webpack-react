@@ -31,7 +31,7 @@ react + react-router4.1 + redux + less + ES6/7 + webpack + fetch + bundle-loader
 ```
 ## 2017年5月19日
 ```
-1.利用CSS Modules进行解决css的命名混乱以及全局污染
+利用CSS Modules进行解决css的命名混乱以及全局污染
 ```
 ## 说明
 

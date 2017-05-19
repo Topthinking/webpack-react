@@ -2,6 +2,8 @@ import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {Link} from 'react-router-dom'
 
+import styles from './style.less'
+
 class Action extends Component{
 	constructor(props) {
 	  super(props);
@@ -9,7 +11,7 @@ class Action extends Component{
 	}
 	render(){
 		return (
-				<div id="user-action-list">
+				<div id={styles["user-action-list"]}>
 					<ul>
 						<li className="clear-fix"><Link to="/css">CSS3效果列表</Link></li>
 						<li className="clear-fix"><Link to="/js">JavaScript基础</Link></li>

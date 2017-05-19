@@ -3,7 +3,9 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import Prism from 'prismjs'
 import StyleData from './animateData'
-import './animate.less'
+
+import animatestyles from './animate.less'
+import styles from '../style.less'
 
 class Animate extends Component{
 	constructor(props) {
@@ -12,22 +14,22 @@ class Animate extends Component{
 	}
 	render(){
 		return (
-				<div id="animate">
-					<div id="animate1" className="animate-list" ref="animate1">
-						<div className="item">位移</div>
-						<div className="content" ref="content1"><pre></pre></div>
+				<div id={animatestyles["animate"]}>
+					<div id={animatestyles["animate1"]} className={animatestyles["animate-list"]} ref="animate1">
+						<div className={animatestyles["item"]}>位移</div>
+						<div className={styles["content"]} ref="content1"><pre></pre></div>
 					</div>
-					<div id="animate2" className="animate-list" ref="animate2">
-						<div className="animate-title">
-							<div className="item item1">旋转1</div>
-							<div className="item item2">旋转2</div>
-							<div className="item-line"></div>
+					<div id={animatestyles["animate2"]} className={animatestyles["animate-list"]} ref="animate2">
+						<div className={animatestyles["animate-title"]}>
+							<div className={animatestyles["item"]+" "+animatestyles["item1"]}>旋转1</div>
+							<div className={animatestyles["item"]+" "+animatestyles["item2"]}>旋转2</div>
+							<div className={animatestyles["item-line"]}></div>
 						</div>
-						<div className="content" ref="content2"><pre></pre></div>
+						<div className={styles["content"]} ref="content2"><pre></pre></div>
 					</div>
-					<div id="animate3" className="animate-list" ref="animate3">
-						<div className="item">翻转</div>
-						<div className="content" ref="content3"><pre></pre></div>
+					<div id={animatestyles["animate3"]} className={animatestyles["animate-list"]} ref="animate3">
+						<div className={animatestyles["item"]}>翻转</div>
+						<div className={styles["content"]} ref="content3"><pre></pre></div>
 					</div>
 				</div>
 			)
@@ -48,7 +50,7 @@ class Animate extends Component{
 		animate.map((item)=>{
 			item.addEventListener("click",function(e){
 
-				let content = item.getElementsByClassName('content')[0];
+				let content = item.getElementsByClassName(styles['content'])[0];
 
 				content.style.right = '-1px';
 				content.style.width = '101%';

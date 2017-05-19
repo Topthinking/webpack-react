@@ -1,7 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
-import './style.less'
+import styles from './style.less'
 
 class CityList extends React.Component {
     constructor(props, context) {
@@ -10,7 +10,7 @@ class CityList extends React.Component {
     }
     render() {
         return (
-            <div className="city-list-container">
+            <div className={styles["city-list-container"]}>
                 <h3>热门城市</h3>
                 <ul className="clear-fix">
                     <li>

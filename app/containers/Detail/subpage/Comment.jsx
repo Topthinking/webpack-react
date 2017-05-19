@@ -7,7 +7,7 @@ import LoadMore from '../../../components/LoadMore'
 
 import CommentData from '../../../../mock/detail/comment'
 
-import './style.less'
+import styles from './style.less'
 
 class Comment extends React.Component {
     constructor(props, context) {
@@ -22,12 +22,12 @@ class Comment extends React.Component {
     }
     render() {
         return (
-            <div className="detail-comment-subpage">
+            <div className={styles["detail-comment-subpage"]}>
                 <h2>用户点评</h2>
                 {
                     this.state.data.length
                     ? <ListComponent data={this.state.data}/>
-                    : <div className="loading">加载中...</div>
+                    : <div className={styles["loading"]}>加载中...</div>
                 }
                 {
                     this.state.hasMore

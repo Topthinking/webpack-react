@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
+import styles from './style.less'
 
 class Face extends Component{
 	constructor(props) {
@@ -9,9 +10,9 @@ class Face extends Component{
 	}
 	render(){
 		return (
-				<div id="user-info-face" className="clear-fix">
-					<div className="face"></div>
-					<div className="user-info-action">
+				<div id={styles["user-info-face"]} className="clear-fix">
+					<div className={styles["face"]}></div>
+					<div className={styles["user-info-action"]}>
 						<span>登录</span>
 						<span>注册</span>
 					</div>

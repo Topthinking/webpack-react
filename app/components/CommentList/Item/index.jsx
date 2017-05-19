@@ -3,7 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import Star from '../../Star'
 
-import './style.less'
+import styles from './style.less'
 
 class CommentItem extends React.Component {
     constructor(props, context) {
@@ -15,7 +15,7 @@ class CommentItem extends React.Component {
         const item = this.props.data
 
         return (
-            <div className="comment-item">
+            <div className={styles["comment-item"]}>
                 <h3>
                     <i className="icon-user"></i>
                     &nbsp;

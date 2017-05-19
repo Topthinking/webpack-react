@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
-import './style.less'
+import styles from './style.less'
 
 class SearchInput extends Component{
 	constructor(props) {
@@ -13,7 +13,7 @@ class SearchInput extends Component{
 	}
 	render(){
 		return (
-				<div className="search-container">
+				<div className={styles['search-container']}>
 					<i className="icon-search"></i>
 					<input 
 						type="text"

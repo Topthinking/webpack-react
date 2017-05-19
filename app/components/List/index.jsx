@@ -3,7 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import Item from './Item'
 
-import './style.less'
+import styles from './style.less'
 
 class HomeList extends Component{
 	constructor(props) {
@@ -12,7 +12,7 @@ class HomeList extends Component{
 	}
 	render(){
 		return (
-				<div className="list-container">
+				<div className={styles['list-container']}>
 					{this.props.data.map((item,index)=>{
 						return <Item key={index} data={item}/>
 					})}

@@ -1,15 +1,30 @@
 const webpack = require('webpack');
 const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
-const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 require('./mock/server.js');
 module.exports = {
-	entry:'./app/index.jsx',
+	entry:{
+	    app: path.resolve(__dirname, 'app/index.jsx'),
+	    // 将 第三方依赖 单独打包
+	    vendor: [
+	      'react', 
+	      'react-dom', 
+	      'react-redux', 
+	      'react-router-dom',
+	      'redux', 
+	      'es6-promise', 
+	      'whatwg-fetch',
+	      'prismjs',
+	      'fastclick'
+	    ]
+  },
 	output:{
 		path:__dirname+"./public",
 		filename: "script/[name].[hash:8].js",
     	jsonpFunction:'Topthinking',
+    	publicPath: "/",
     	chunkFilename: "script/[name].[chunkhash:8].js"
 	},
 	resolve:{
@@ -28,20 +43,26 @@ module.exports = {
 			{ 
 				test: /\.less$/, 
 				exclude: /node_modules/, 
-				loader: 'style-loader!css-loader!postcss-loader!less-loader' 
+	            loader: ExtractTextPlugin.extract({
+	               fallback:'style-loader', 
+	               use:'css-loader?modules&localIdentName=[local]-[hash:base64:8]!resolve-url-loader!postcss-loader!less-loader'
+	             }) 
 			},
             { 
             	test: /\.css$/, 
             	exclude: /node_modules/, 
-            	loader: 'style-loader!css-loader!postcss-loader' 
+            	loader: ExtractTextPlugin.extract({
+                	fallback:'style-loader', 
+                	use:'css-loadermodules&localIdentName=[local]-[hash:base64:8]!resolve-url-loader!postcss-loader'
+              	}) 
             },
             { 
             	test:/\.(png|gif|jpg|jpeg|bmp)$/, 
-            	loader:'url-loader?limit=5000' 
+            	loader:'url-loader?limit=1&name=images/[name].[hash:8].[ext]' 
             },  // 限制大小5kb
             { 
             	test:/\.(woff|woff2|svg|ttf|eot)($|\?)/, 
-            	loader:'file-loader?limit=5000'
+            	loader:'file-loader?name=fonts/[name].[hash:8].[ext]'
             } // 限制大小小于5k
 		]
 	},
@@ -63,11 +84,16 @@ module.exports = {
 			}
 		}),
 
-		new OpenBrowserPlugin({
-			url:'http://localhost:8080'
-		}),
+		// 分离CSS
+    	new ExtractTextPlugin('style/[name].[chunkhash:8].css'), 
 
-		new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin(),
+
+		// 提供公共代码
+	    new webpack.optimize.CommonsChunkPlugin({
+	      name: 'vendor',
+	      filename: 'script/[name].[hash:8].js'
+	    })
 	],
 
 	devServer:{

@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
-import './style.less'
+import styles from './style.less'
 
 class Header extends Component{
 	constructor(props) {
@@ -10,8 +10,8 @@ class Header extends Component{
 	}
 	render(){
 		return (
-				<div id="common-header">
-					<span className="back-icon" onClick={this.clickHandle.bind(this)}>
+				<div id={styles["common-header"]}>
+					<span className={styles["back-icon"]} onClick={this.clickHandle.bind(this)}>
 						<i className="icon-chevron-left"></i>
 					</span>
 					<h1>{this.props.title}</h1>

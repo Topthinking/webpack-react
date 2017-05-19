@@ -3,7 +3,9 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import Prism from 'prismjs'
 import StyleData from './centerData'
-import './center.less'
+
+import centerstyles from './center.less'
+import styles from '../style.less'
 
 class Center extends Component{
 	constructor(props) {
@@ -12,22 +14,22 @@ class Center extends Component{
 	}
 	render(){
 		return (
-				<div id="center">
-					<div id="center1" className="center-list" ref="center1">
-						<div className="item">1</div>
-						<div className="content" ref="content1"><pre></pre></div>
+				<div id={centerstyles["center"]}>
+					<div id={centerstyles["center1"]} className={centerstyles["center-list"]} ref="center1">
+						<div className={centerstyles["item"]}>1</div>
+						<div className={styles["content"]} ref="content1"><pre></pre></div>
 					</div>
-					<div id="center2" className="center-list" ref="center2">
-						<div className="item">2</div>
-						<div className="content" ref="content2"><pre></pre></div>
+					<div id={centerstyles["center2"]} className={centerstyles["center-list"]} ref="center2">
+						<div className={centerstyles["item"]}>2</div>
+						<div className={styles["content"]} ref="content2"><pre></pre></div>
 					</div>
-					<div id="center3" className="center-list" ref="center3">
-						<div className="item">3</div>
-						<div className="content" ref="content3"><pre></pre></div>
+					<div id={centerstyles["center3"]} className={centerstyles["center-list"]} ref="center3">
+						<div className={centerstyles["item"]}>3</div>
+						<div className={styles["content"]} ref="content3"><pre></pre></div>
 					</div>
-					<div id="center4" className="center-list" ref="center4">
-						<div className="item">4</div>
-						<div className="content" ref="content4"><pre></pre></div>
+					<div id={centerstyles["center4"]} className={centerstyles["center-list"]} ref="center4">
+						<div className={centerstyles["item"]}>4</div>
+						<div className={styles["content"]} ref="content4"><pre></pre></div>
 					</div>
 				</div>
 			)
@@ -49,7 +51,7 @@ class Center extends Component{
 		center.map((item)=>{
 			item.addEventListener("click",function(e){
 
-				let content = item.getElementsByClassName('content')[0];
+				let content = item.getElementsByClassName(styles["content"])[0];
 
 				content.style.right = '-1px';
 				content.style.width = '101%';

@@ -7,7 +7,7 @@ import LoadMore from '../../../components/LoadMore'
 
 import ListData from '../../../../mock/home/list'
 
-import './style.less'
+import styles from './style.less'
 
 class List extends Component{
 	constructor(props) {
@@ -23,7 +23,7 @@ class List extends Component{
 	render(){
 		return (
 				<div>
-					<h2 className="home-list-title">猜你喜欢</h2>
+					<h2 className={styles["home-list-title"]}>猜你喜欢</h2>
 					{
 						this.state.data.length
 						? <HomeList data={this.state.data}/>

@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
-import './style.less'
+import styles from './style.less'
 
 class LoadMore extends Component{
 	constructor(props) {
@@ -10,7 +10,7 @@ class LoadMore extends Component{
 	}
 	render(){
 		return (
-				<div className="load-more" ref="wrapper">
+				<div className={styles["load-more"]} ref="wrapper">
 					{
 						this.props.isLoadingMore
 						? <span>加载中...</span>

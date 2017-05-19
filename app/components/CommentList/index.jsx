@@ -3,7 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import Item from './Item'
 
-import './style.less'
+import styles from './style.less'
 
 class CommentList extends React.Component {
     constructor(props, context) {
@@ -15,7 +15,7 @@ class CommentList extends React.Component {
         const data = this.props.data
 
         return (
-            <div className="comment-list">
+            <div className={styles["comment-list"]}>
                 {data.map((item, index) => {
                     return <Item key={index} data={item}/>
                 })}

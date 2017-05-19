@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
-import './style.less'
+import styles from './style.less'
 
 class CurrentCity extends Component{
 	constructor(props) {
@@ -10,7 +10,7 @@ class CurrentCity extends Component{
 	}
 	render(){
 		return (
-				<div className="current-city">
+				<div className={styles["current-city"]}>
 					{this.props.cityName}
 				</div>
 			)

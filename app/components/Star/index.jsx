@@ -1,7 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
-import './style.less'
+import styles from './style.less'
 
 class Star extends React.Component {
     constructor(props, context) {
@@ -16,9 +16,9 @@ class Star extends React.Component {
         }
 
         return (
-            <div className="star-container">
+            <div className={styles["star-container"]}>
                 {[1, 2, 3, 4, 5].map((item, index) => {
-                    const lightClass = star >= item ? ' light' : ''
+                    const lightClass = star >= item ? styles["light"] : ''
                     return <i key={index} className={'icon-star' + lightClass}></i>
                 })}
             </div>

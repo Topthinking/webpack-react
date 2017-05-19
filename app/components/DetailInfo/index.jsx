@@ -3,7 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import Star from '../Star'
 
-import './style.less'
+import styles from './style.less'
 
 class DetailInfo extends Component{
 	constructor(props) {
@@ -13,21 +13,21 @@ class DetailInfo extends Component{
 	render(){
 		const data = this.props.data
 		return (
-				<div className="detail-info-container">
-					<div className="info-container clear-fix">
-						<div className="info-img-container float-left">
+				<div className={styles["detail-info-container"]}>
+					<div className={styles["info-container"]+" clear-fix"}>
+						<div className={styles["info-img-container"]+" float-left"}>
 							<img src={data.img} />
 						</div>
-						<div className="info-content">
+						<div className={styles["info-content"]}>
 							<h1>{data.title}</h1>
-							<div className="star-content">
+							<div className={styles["star-content"]}>
 								<Star star={data.star}/>
-								<span className="price">￥{data.price}</span>
+								<span className={styles["price"]}>￥{data.price}</span>
 							</div>
-							<p className="sub-title">{data.subTitle}</p>
+							<p className={styles["sub-title"]}>{data.subTitle}</p>
 						</div>
 					</div>
-					<p dangerouslySetInnerHTML={{__html:data.desc}} className="info-desc"></p>
+					<p dangerouslySetInnerHTML={{__html:data.desc}} className={styles["info-desc"]}></p>
 				</div>
 			)
 	}

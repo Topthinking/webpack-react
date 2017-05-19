@@ -3,7 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { connect } from 'react-redux'
 import {Link} from 'react-router-dom'
 
-import './style.less'
+import styles from './style.less'
 
 class Footer extends Component{
 	constructor(props) {
@@ -17,33 +17,33 @@ class Footer extends Component{
 				{
 					menu === 0
 					?   ''
-					:   <div id="common-footer">
-							<ul className="footer-list">
+					:   <div id={styles["common-footer"]}>
+							<ul className={styles["footer-list"]}>
 								<li>
 									{
 										menu === 1
-										? <span className="active">首页</span>
+										? <span className={styles["active"]}>首页</span>
 										: <Link to="/"><span>首页</span></Link>
 									}							
 								</li>
 								<li>
 									{
 										menu === 2
-										? <span className="active">新闻</span>
+										? <span className={styles["active"]}>新闻</span>
 										: <span>新闻</span>
 									}
 								</li>
 								<li>
 									{
 										menu === 3
-										? <span className="active">发现</span>
+										? <span className={styles["active"]}>发现</span>
 										: <Link to="/search/all"><span>发现</span></Link>
 									}
 								</li>
 								<li>
 									{
 										menu === 4
-										? <span className="active">我的</span>
+										? <span className={styles["active"]}>我的</span>
 										: <Link to="/user"><span>我的</span></Link>
 									}
 								</li>

@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import SearchInput from '../SearchInput'
-import './style.less'
+import styles from './style.less'
 
 class SearchHeader extends Component{
 	constructor(props) {
@@ -10,8 +10,8 @@ class SearchHeader extends Component{
 	}
 	render(){
 		return (
-				<div id="search-header" className="clear-fix">
-					<span className="back-icon float-left" onClick={this.clickHandle.bind(this)}>
+				<div id={styles["search-header"]} className="clear-fix">
+					<span className={styles["back-icon"]+" float-left"} onClick={this.clickHandle.bind(this)}>
 						<i className="icon-chevron-left"></i>
 					</span>
 					<SearchInput 

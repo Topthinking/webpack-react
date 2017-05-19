@@ -7,8 +7,8 @@ import * as appActions from '../../actions/app'
 
 import Face from './subpage/face'
 import ActionList from './subpage/action'
-import './style.less'
-import './subpage/style.less'
+import styles from './style.less'
+
 class User extends Component{
 	constructor(props) {
 	  super(props);
@@ -16,7 +16,7 @@ class User extends Component{
 	}
 	render(){
 		return (
-				<div id="user-info">
+				<div id={styles["user-info"]}>
 					<Face />
 					<div style={{height: '15px'}}></div>
 					<ActionList />

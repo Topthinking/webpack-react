@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import {Link} from 'react-router-dom'
 import SearchInput from '../SearchInput'
-import './style.less'
+import styles from './style.less'
 
 
 class HomeHeader extends Component{
@@ -15,15 +15,15 @@ class HomeHeader extends Component{
 	}
 	render(){
 		return (
-				<div id="home-header" className="clear-fix">
-					<div className="home-header-left float-left">
+				<div id={styles['home-header']} className="clear-fix">
+					<div className={styles["home-header-left"]+" float-left"}>
 						<Link to="/city">
 						<span>{this.props.cityName}</span>
 						&nbsp;
 						<i className="icon-angle-down"></i>
 						</Link>
 					</div>
-					<div className="home-header-right float-right">
+					<div className={styles["home-header-right"]+" float-right"}>
 						<Link to="/user">
 						<i className="icon-user"></i>
 						</Link>

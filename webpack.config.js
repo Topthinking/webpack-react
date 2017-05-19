@@ -69,7 +69,7 @@ module.exports = {
               exclude: /node_modules/, 
               loader: ExtractTextPlugin.extract({
                 fallback:'style-loader', 
-                use:'css-loader!postcss-loader!less-loader'
+                use:'css-loader?modules&localIdentName=[local]-[hash:base64:8]!resolve-url-loader!postcss-loader!less-loader'
               })
             },
             { 
@@ -77,7 +77,7 @@ module.exports = {
               exclude: /node_modules/, 
               loader: ExtractTextPlugin.extract({
                 fallback:'style-loader', 
-                use:'css-loader!postcss-loader'
+                use:'css-loadermodules&localIdentName=[local]-[hash:base64:8]!resolve-url-loader!postcss-loader'
               })
             },
             { 
@@ -152,7 +152,7 @@ module.exports = {
     // 提供公共代码
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      filename: 'script/[name].[chunkhash:8].js'
+      filename: 'script/[name].[hash:8].js'
     })
   ]
 }

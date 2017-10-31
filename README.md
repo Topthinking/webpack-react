@@ -43,6 +43,8 @@ react + react-router4.1 + redux + less + ES6/7 + webpack + fetch + bundle-loader
 
 >  我的个站[首页](http://topthinking.github.io/)使用的是angular1.4构建的。[地址在这里](https://github.com/Topthinking/top)
 
+>  这是react的客户端渲染的实现，现在我用react实现了服务端渲染，[地址在这里](https://github.com/Topthinking/react-ssr)
+
 ## 演示
 [demo](http://topthinking.github.io/dianping/)（请用chrome的手机模式预览）
 

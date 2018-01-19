@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom'
 import SearchInput from '../SearchInput'
 import styles from './style.less'
 
-
 class HomeHeader extends Component{
 	constructor(props) {
 	  super(props);

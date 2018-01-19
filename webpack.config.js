@@ -43,7 +43,7 @@ module.exports = {
     ]
   },
   output: {
-    path:path.resolve(__dirname, '../build'),
+    path:path.resolve(__dirname, './build'),
     filename: "script/[name].[chunkhash:8].js",
     jsonpFunction:'Topthinking',
     publicPath: "/dianping/",
@@ -77,7 +77,7 @@ module.exports = {
               exclude: /node_modules/, 
               loader: ExtractTextPlugin.extract({
                 fallback:'style-loader', 
-                use:'css-loadermodules&localIdentName=[local]-[hash:base64:8]!resolve-url-loader!postcss-loader'
+                use:'css-loader?modules&localIdentName=[local]-[hash:base64:8]!resolve-url-loader!postcss-loader'
               })
             },
             { 

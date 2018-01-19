@@ -33,6 +33,10 @@ react + react-router4.1 + redux + less + ES6/7 + webpack + fetch + bundle-loader
 ```
 利用CSS Modules进行解决css的命名混乱以及全局污染
 ```
+## 2018年1月19日
+```
+开发模式热更新，后续会重构代码，实现服务端渲染[基于react-routerV4]
+```
 ## 说明
 
 >  本项目主要理解 react 和 redux 的原理，以及 react + redux 之间的配合方式，同时对react-router4进行由浅入深的学习和探究，欢迎大家一起学习新的路由方式

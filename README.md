@@ -1,41 +1,23 @@
-# 使用React模仿大众点评
+# React 项目
 
-## 技术栈：
-react + react-router4.1 + redux + less + ES6/7 + webpack + fetch + bundle-loader
+主要记录所有以`webpack`为打包工具的`react`项目的研究和学习
 
 ## 下载
 
- 	git clone https://github.com/Topthinking/react-webapp-dianping.git
+```shell
+$ git clone https://github.com/Topthinking/webpack-react.git
+$ cd webpack-react
+```
 
- 	cd react-webapp-dianping
+## 项目列表
 
- 	npm install
+>	### [仿大众点评项目](./dianping/README.md)
 
- ## 运行（nodejs 6.0+）
-```
- npm run dev (正常编译模式)
+## 提交记录
 
- 访问 http://localhost:8080
-
- npm run build （发布生产版本，对代码进行混淆压缩，提取公共代码，分离css文件）
+#### 2018年1月23日
 ```
-## 2017年5月8日
-```
-初次提交
-```
-## 2017年5月14日
-```
-1.利用webpack的bundle-loader实现代码分割，最终实现根据路由按需加载，加快用户对首屏的访问速度
-2.添加fastclick解决移动端300毫秒延迟
-3.实现详情页面，复用之前的列表组件和加载组件，只是样式和数据结构不一样
-```
-## 2017年5月19日
-```
-利用CSS Modules进行解决css的命名混乱以及全局污染
-```
-## 2018年1月19日
-```
-开发模式热更新，后续会重构代码，实现服务端渲染[基于react-routerV4]
+修改文件夹结构，整合React项目，呈现多个项目组的形式
 ```
 ## 说明
 
@@ -45,12 +27,4 @@ react + react-router4.1 + redux + less + ES6/7 + webpack + fetch + bundle-loader
 
 >  如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR 👍
 
->  我的个站[首页](http://topthinking.github.io/)使用的是angular1.4构建的。[地址在这里](https://github.com/Topthinking/top)
-
 >  这是react的客户端渲染的实现，现在我用react实现了服务端渲染，[地址在这里](https://github.com/Topthinking/react-ssr)
-
-## 演示
-[demo](http://topthinking.github.io/dianping/)（请用chrome的手机模式预览）
-
-### 移动端扫描下方二维码
-![](https://github.com/Topthinking/react-webapp-dianping/blob/master/doc/images/demo_code.png)

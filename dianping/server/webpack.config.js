@@ -5,7 +5,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 	entry:[
 		'react-hot-loader/patch',
-        'webpack-hot-middleware/client?path=/webpack-hmr&timeout=2000&quiet=true&reload=true&overlay=false',
+    'webpack-hot-middleware/client?path=/webpack-hmr&timeout=2000&quiet=true&reload=true&overlay=false',
 		'./app/index.jsx'
 	],
 	output:{

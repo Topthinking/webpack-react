@@ -1,0 +1,1227 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "3.10.0",
+  "hash": "b4c9c896a4fbb7408016",
+  "time": 790,
+  "publicPath": "",
+  "assetsByChunkName": {
+    "a": "a.js",
+    "b": "b.js"
+  },
+  "assets": [
+    {
+      "name": "a.js",
+      "size": 6205,
+      "chunks": [
+        0,
+        1
+      ],
+      "chunkNames": [
+        "a"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "b.js",
+      "size": 3354,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "b"
+      ],
+      "emitted": true
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "a": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "a.js"
+      ]
+    },
+    "b": {
+      "chunks": [
+        1
+      ],
+      "assets": [
+        "b.js"
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "id": 0,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "extraAsync": false,
+      "size": 956,
+      "names": [
+        "a"
+      ],
+      "files": [
+        "a.js"
+      ],
+      "hash": "0982797abbb474e61458",
+      "parents": [],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/b.js",
+          "name": "./src/b.js",
+          "index": 8,
+          "index2": 9,
+          "size": 121,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0,
+            1
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "profile": {
+            "factory": 652,
+            "building": 51
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/a.js",
+              "module": "./src/a.js",
+              "moduleName": "./src/a.js",
+              "type": "harmony import",
+              "userRequest": "./b",
+              "loc": "3:0-13"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "\n//import { A , D } from './modules'\n\n// export default () => {\n// \tconsole.log(123)\n// }\n\nimport * as a from './server';"
+        },
+        {
+          "id": 1,
+          "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/server/index.js",
+          "name": "./src/server/index.js",
+          "index": 9,
+          "index2": 8,
+          "size": 153,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0,
+            1
+          ],
+          "assets": [],
+          "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/b.js",
+          "issuerId": 0,
+          "issuerName": "./src/b.js",
+          "profile": {
+            "factory": 4,
+            "building": 27
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 0,
+              "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/b.js",
+              "module": "./src/b.js",
+              "moduleName": "./src/b.js",
+              "type": "harmony import",
+              "userRequest": "./server",
+              "loc": "8:0-30"
+            }
+          ],
+          "usedExports": false,
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "\nlet ret;\n\nif (process.env.TARGET_IS_NODE) {\n\tret = require('./a');\n} else if (process.env.TARGET_IS_WEB) {\n\tret = require('./b');\n}\n\nexport default ret;"
+        },
+        {
+          "id": 2,
+          "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/server/a.js",
+          "name": "./src/server/a.js",
+          "index": 10,
+          "index2": 7,
+          "size": 52,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0,
+            1
+          ],
+          "assets": [],
+          "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/server/index.js",
+          "issuerId": 1,
+          "issuerName": "./src/server/index.js",
+          "profile": {
+            "factory": 4,
+            "building": 13
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/server/index.js",
+              "module": "./src/server/index.js",
+              "moduleName": "./src/server/index.js",
+              "type": "cjs require",
+              "userRequest": "./a",
+              "loc": "5:7-21"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 2,
+          "source": "export default (() => {\n\tconsole.log('服务端运行代码');\n});"
+        },
+        {
+          "id": 3,
+          "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/a.js",
+          "name": "./src/a.js",
+          "index": 0,
+          "index2": 10,
+          "size": 67,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "profile": {
+            "factory": 26,
+            "building": 673,
+            "dependencies": 8
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "usedExports": true,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "\nimport * as mod from './modules';\nimport './b';\n\nmod.A();\nmod.D();"
+        },
+        {
+          "id": 4,
+          "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+          "name": "./src/modules/index.js",
+          "index": 1,
+          "index2": 6,
+          "size": 197,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/a.js",
+          "issuerId": 3,
+          "issuerName": "./src/a.js",
+          "profile": {
+            "factory": 9,
+            "building": 13
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/a.js",
+              "module": "./src/a.js",
+              "moduleName": "./src/a.js",
+              "type": "harmony import",
+              "userRequest": "./modules",
+              "loc": "2:0-33"
+            }
+          ],
+          "usedExports": [
+            "A",
+            "D"
+          ],
+          "providedExports": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ],
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "import A from './a.module';\nimport B from './b.module';\nimport C from './c.module';\nimport D from './d.module';\nimport E from './e.module';\nimport F from './f.module';\n\nexport { A, B, C, D, E, F };"
+        },
+        {
+          "id": 5,
+          "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/a.module.js",
+          "name": "./src/modules/a.module.js",
+          "index": 2,
+          "index2": 0,
+          "size": 61,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+          "issuerId": 4,
+          "issuerName": "./src/modules/index.js",
+          "profile": {
+            "factory": 17,
+            "building": 5
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 4,
+              "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+              "module": "./src/modules/index.js",
+              "moduleName": "./src/modules/index.js",
+              "type": "harmony import",
+              "userRequest": "./a.module",
+              "loc": "1:0-27"
+            }
+          ],
+          "usedExports": [
+            "default"
+          ],
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 2,
+          "source": "export default (() => {\n\tconsole.log('this is a module');\n});"
+        },
+        {
+          "id": 6,
+          "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/b.module.js",
+          "name": "./src/modules/b.module.js",
+          "index": 3,
+          "index2": 1,
+          "size": 61,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+          "issuerId": 4,
+          "issuerName": "./src/modules/index.js",
+          "profile": {
+            "factory": 18,
+            "building": 6
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 4,
+              "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+              "module": "./src/modules/index.js",
+              "moduleName": "./src/modules/index.js",
+              "type": "harmony import",
+              "userRequest": "./b.module",
+              "loc": "2:0-27"
+            }
+          ],
+          "usedExports": false,
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 2,
+          "source": "export default (() => {\n\tconsole.log('this is b module');\n});"
+        },
+        {
+          "id": 7,
+          "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/c.module.js",
+          "name": "./src/modules/c.module.js",
+          "index": 4,
+          "index2": 2,
+          "size": 61,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+          "issuerId": 4,
+          "issuerName": "./src/modules/index.js",
+          "profile": {
+            "factory": 18,
+            "building": 8
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 4,
+              "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+              "module": "./src/modules/index.js",
+              "moduleName": "./src/modules/index.js",
+              "type": "harmony import",
+              "userRequest": "./c.module",
+              "loc": "3:0-27"
+            }
+          ],
+          "usedExports": false,
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 2,
+          "source": "export default (() => {\n\tconsole.log('this is c module');\n});"
+        },
+        {
+          "id": 8,
+          "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/d.module.js",
+          "name": "./src/modules/d.module.js",
+          "index": 5,
+          "index2": 3,
+          "size": 61,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+          "issuerId": 4,
+          "issuerName": "./src/modules/index.js",
+          "profile": {
+            "factory": 18,
+            "building": 9
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 4,
+              "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+              "module": "./src/modules/index.js",
+              "moduleName": "./src/modules/index.js",
+              "type": "harmony import",
+              "userRequest": "./d.module",
+              "loc": "4:0-27"
+            }
+          ],
+          "usedExports": [
+            "default"
+          ],
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 2,
+          "source": "export default (() => {\n\tconsole.log('this is d module');\n});"
+        },
+        {
+          "id": 9,
+          "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/e.module.js",
+          "name": "./src/modules/e.module.js",
+          "index": 6,
+          "index2": 4,
+          "size": 61,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+          "issuerId": 4,
+          "issuerName": "./src/modules/index.js",
+          "profile": {
+            "factory": 18,
+            "building": 10
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 4,
+              "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+              "module": "./src/modules/index.js",
+              "moduleName": "./src/modules/index.js",
+              "type": "harmony import",
+              "userRequest": "./e.module",
+              "loc": "5:0-27"
+            }
+          ],
+          "usedExports": false,
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 2,
+          "source": "export default (() => {\n\tconsole.log('this is e module');\n});"
+        },
+        {
+          "id": 10,
+          "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/f.module.js",
+          "name": "./src/modules/f.module.js",
+          "index": 7,
+          "index2": 5,
+          "size": 61,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+          "issuerId": 4,
+          "issuerName": "./src/modules/index.js",
+          "profile": {
+            "factory": 18,
+            "building": 11
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 4,
+              "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+              "module": "./src/modules/index.js",
+              "moduleName": "./src/modules/index.js",
+              "type": "harmony import",
+              "userRequest": "./f.module",
+              "loc": "6:0-27"
+            }
+          ],
+          "usedExports": false,
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 2,
+          "source": "export default (() => {\n\tconsole.log('this is f module');\n});"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": 3,
+          "module": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/a.js",
+          "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/a.js",
+          "moduleName": "./src/a.js",
+          "loc": "",
+          "name": "a",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "extraAsync": false,
+      "size": 326,
+      "names": [
+        "b"
+      ],
+      "files": [
+        "b.js"
+      ],
+      "hash": "b63ea1f5d209bb96c8f8",
+      "parents": [],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/b.js",
+          "name": "./src/b.js",
+          "index": 8,
+          "index2": 9,
+          "size": 121,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0,
+            1
+          ],
+          "assets": [],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "profile": {
+            "factory": 652,
+            "building": 51
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/a.js",
+              "module": "./src/a.js",
+              "moduleName": "./src/a.js",
+              "type": "harmony import",
+              "userRequest": "./b",
+              "loc": "3:0-13"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": [],
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "\n//import { A , D } from './modules'\n\n// export default () => {\n// \tconsole.log(123)\n// }\n\nimport * as a from './server';"
+        },
+        {
+          "id": 1,
+          "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/server/index.js",
+          "name": "./src/server/index.js",
+          "index": 9,
+          "index2": 8,
+          "size": 153,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0,
+            1
+          ],
+          "assets": [],
+          "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/b.js",
+          "issuerId": 0,
+          "issuerName": "./src/b.js",
+          "profile": {
+            "factory": 4,
+            "building": 27
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 0,
+              "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/b.js",
+              "module": "./src/b.js",
+              "moduleName": "./src/b.js",
+              "type": "harmony import",
+              "userRequest": "./server",
+              "loc": "8:0-30"
+            }
+          ],
+          "usedExports": false,
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "\nlet ret;\n\nif (process.env.TARGET_IS_NODE) {\n\tret = require('./a');\n} else if (process.env.TARGET_IS_WEB) {\n\tret = require('./b');\n}\n\nexport default ret;"
+        },
+        {
+          "id": 2,
+          "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/server/a.js",
+          "name": "./src/server/a.js",
+          "index": 10,
+          "index2": 7,
+          "size": 52,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0,
+            1
+          ],
+          "assets": [],
+          "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/server/index.js",
+          "issuerId": 1,
+          "issuerName": "./src/server/index.js",
+          "profile": {
+            "factory": 4,
+            "building": 13
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/server/index.js",
+              "module": "./src/server/index.js",
+              "moduleName": "./src/server/index.js",
+              "type": "cjs require",
+              "userRequest": "./a",
+              "loc": "5:7-21"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 2,
+          "source": "export default (() => {\n\tconsole.log('服务端运行代码');\n});"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": 0,
+          "module": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/b.js",
+          "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/b.js",
+          "moduleName": "./src/b.js",
+          "loc": "",
+          "name": "b",
+          "reasons": []
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/b.js",
+      "name": "./src/b.js",
+      "index": 8,
+      "index2": 9,
+      "size": 121,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0,
+        1
+      ],
+      "assets": [],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "profile": {
+        "factory": 652,
+        "building": 51
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/a.js",
+          "module": "./src/a.js",
+          "moduleName": "./src/a.js",
+          "type": "harmony import",
+          "userRequest": "./b",
+          "loc": "3:0-13"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": [],
+      "optimizationBailout": [],
+      "depth": 0,
+      "source": "\n//import { A , D } from './modules'\n\n// export default () => {\n// \tconsole.log(123)\n// }\n\nimport * as a from './server';"
+    },
+    {
+      "id": 1,
+      "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/server/index.js",
+      "name": "./src/server/index.js",
+      "index": 9,
+      "index2": 8,
+      "size": 153,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0,
+        1
+      ],
+      "assets": [],
+      "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/b.js",
+      "issuerId": 0,
+      "issuerName": "./src/b.js",
+      "profile": {
+        "factory": 4,
+        "building": 27
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 0,
+          "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/b.js",
+          "module": "./src/b.js",
+          "moduleName": "./src/b.js",
+          "type": "harmony import",
+          "userRequest": "./server",
+          "loc": "8:0-30"
+        }
+      ],
+      "usedExports": false,
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [],
+      "depth": 1,
+      "source": "\nlet ret;\n\nif (process.env.TARGET_IS_NODE) {\n\tret = require('./a');\n} else if (process.env.TARGET_IS_WEB) {\n\tret = require('./b');\n}\n\nexport default ret;"
+    },
+    {
+      "id": 2,
+      "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/server/a.js",
+      "name": "./src/server/a.js",
+      "index": 10,
+      "index2": 7,
+      "size": 52,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0,
+        1
+      ],
+      "assets": [],
+      "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/server/index.js",
+      "issuerId": 1,
+      "issuerName": "./src/server/index.js",
+      "profile": {
+        "factory": 4,
+        "building": 13
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 1,
+          "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/server/index.js",
+          "module": "./src/server/index.js",
+          "moduleName": "./src/server/index.js",
+          "type": "cjs require",
+          "userRequest": "./a",
+          "loc": "5:7-21"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [],
+      "depth": 2,
+      "source": "export default (() => {\n\tconsole.log('服务端运行代码');\n});"
+    },
+    {
+      "id": 3,
+      "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/a.js",
+      "name": "./src/a.js",
+      "index": 0,
+      "index2": 10,
+      "size": 67,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "profile": {
+        "factory": 26,
+        "building": 673,
+        "dependencies": 8
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [],
+      "usedExports": true,
+      "providedExports": [],
+      "optimizationBailout": [],
+      "depth": 0,
+      "source": "\nimport * as mod from './modules';\nimport './b';\n\nmod.A();\nmod.D();"
+    },
+    {
+      "id": 4,
+      "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+      "name": "./src/modules/index.js",
+      "index": 1,
+      "index2": 6,
+      "size": 197,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/a.js",
+      "issuerId": 3,
+      "issuerName": "./src/a.js",
+      "profile": {
+        "factory": 9,
+        "building": 13
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/a.js",
+          "module": "./src/a.js",
+          "moduleName": "./src/a.js",
+          "type": "harmony import",
+          "userRequest": "./modules",
+          "loc": "2:0-33"
+        }
+      ],
+      "usedExports": [
+        "A",
+        "D"
+      ],
+      "providedExports": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "optimizationBailout": [],
+      "depth": 1,
+      "source": "import A from './a.module';\nimport B from './b.module';\nimport C from './c.module';\nimport D from './d.module';\nimport E from './e.module';\nimport F from './f.module';\n\nexport { A, B, C, D, E, F };"
+    },
+    {
+      "id": 5,
+      "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/a.module.js",
+      "name": "./src/modules/a.module.js",
+      "index": 2,
+      "index2": 0,
+      "size": 61,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+      "issuerId": 4,
+      "issuerName": "./src/modules/index.js",
+      "profile": {
+        "factory": 17,
+        "building": 5
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 4,
+          "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+          "module": "./src/modules/index.js",
+          "moduleName": "./src/modules/index.js",
+          "type": "harmony import",
+          "userRequest": "./a.module",
+          "loc": "1:0-27"
+        }
+      ],
+      "usedExports": [
+        "default"
+      ],
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [],
+      "depth": 2,
+      "source": "export default (() => {\n\tconsole.log('this is a module');\n});"
+    },
+    {
+      "id": 6,
+      "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/b.module.js",
+      "name": "./src/modules/b.module.js",
+      "index": 3,
+      "index2": 1,
+      "size": 61,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+      "issuerId": 4,
+      "issuerName": "./src/modules/index.js",
+      "profile": {
+        "factory": 18,
+        "building": 6
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 4,
+          "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+          "module": "./src/modules/index.js",
+          "moduleName": "./src/modules/index.js",
+          "type": "harmony import",
+          "userRequest": "./b.module",
+          "loc": "2:0-27"
+        }
+      ],
+      "usedExports": false,
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [],
+      "depth": 2,
+      "source": "export default (() => {\n\tconsole.log('this is b module');\n});"
+    },
+    {
+      "id": 7,
+      "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/c.module.js",
+      "name": "./src/modules/c.module.js",
+      "index": 4,
+      "index2": 2,
+      "size": 61,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+      "issuerId": 4,
+      "issuerName": "./src/modules/index.js",
+      "profile": {
+        "factory": 18,
+        "building": 8
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 4,
+          "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+          "module": "./src/modules/index.js",
+          "moduleName": "./src/modules/index.js",
+          "type": "harmony import",
+          "userRequest": "./c.module",
+          "loc": "3:0-27"
+        }
+      ],
+      "usedExports": false,
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [],
+      "depth": 2,
+      "source": "export default (() => {\n\tconsole.log('this is c module');\n});"
+    },
+    {
+      "id": 8,
+      "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/d.module.js",
+      "name": "./src/modules/d.module.js",
+      "index": 5,
+      "index2": 3,
+      "size": 61,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+      "issuerId": 4,
+      "issuerName": "./src/modules/index.js",
+      "profile": {
+        "factory": 18,
+        "building": 9
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 4,
+          "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+          "module": "./src/modules/index.js",
+          "moduleName": "./src/modules/index.js",
+          "type": "harmony import",
+          "userRequest": "./d.module",
+          "loc": "4:0-27"
+        }
+      ],
+      "usedExports": [
+        "default"
+      ],
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [],
+      "depth": 2,
+      "source": "export default (() => {\n\tconsole.log('this is d module');\n});"
+    },
+    {
+      "id": 9,
+      "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/e.module.js",
+      "name": "./src/modules/e.module.js",
+      "index": 6,
+      "index2": 4,
+      "size": 61,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+      "issuerId": 4,
+      "issuerName": "./src/modules/index.js",
+      "profile": {
+        "factory": 18,
+        "building": 10
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 4,
+          "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+          "module": "./src/modules/index.js",
+          "moduleName": "./src/modules/index.js",
+          "type": "harmony import",
+          "userRequest": "./e.module",
+          "loc": "5:0-27"
+        }
+      ],
+      "usedExports": false,
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [],
+      "depth": 2,
+      "source": "export default (() => {\n\tconsole.log('this is e module');\n});"
+    },
+    {
+      "id": 10,
+      "identifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/f.module.js",
+      "name": "./src/modules/f.module.js",
+      "index": 7,
+      "index2": 5,
+      "size": 61,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+      "issuerId": 4,
+      "issuerName": "./src/modules/index.js",
+      "profile": {
+        "factory": 18,
+        "building": 11
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [
+        {
+          "moduleId": 4,
+          "moduleIdentifier": "/Users/top/top/webpack-react/build/node_modules/_babel-loader@7.1.2@babel-loader/lib/index.js!/Users/top/top/webpack-react/build/src/modules/index.js",
+          "module": "./src/modules/index.js",
+          "moduleName": "./src/modules/index.js",
+          "type": "harmony import",
+          "userRequest": "./f.module",
+          "loc": "6:0-27"
+        }
+      ],
+      "usedExports": false,
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [],
+      "depth": 2,
+      "source": "export default (() => {\n\tconsole.log('this is f module');\n});"
+    }
+  ],
+  "filteredModules": 0,
+  "children": []
+}

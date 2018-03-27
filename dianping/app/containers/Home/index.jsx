@@ -13,7 +13,10 @@ import List from './subpage/List'
 class Home extends Component{
 	constructor(props) {
 	  super(props);
-	  this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+		this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+		this.state = {
+			name:1
+		}
 	}
 	render(){
 		return (
@@ -21,7 +24,10 @@ class Home extends Component{
 					<HomeHeader cityName={this.props.userinfo.cityName} history={this.props.history}/>
 					<Category />
 					<div style={{height: '15px'}}></div>
-					<Ad/>
+				<Ad />				
+				{this.state.name}
+				<button onClick={() => { this.setState({ name: 2 }) }}>点击</button>
+				
 					<List cityName={this.props.userinfo.cityName}/>
 				</div>
 			)

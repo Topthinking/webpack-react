@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "node server",
-    "build": "webpack --config webpack.config.js --progress --colors"
+    "build": "webpack --config webpack.config.js --progress --colors",
+    "deploy":"npm run build && cd dist/ && git add . && git commit -m '更新' && git push"
   },  
   "dependencies": {
     "bundle-loader": "^0.5.5",

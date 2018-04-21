@@ -22,9 +22,9 @@ if (process.env.NODE_ENV != 'production') {
 	render(
 		<AppContainer>
 			<Provider store={store}>
-				<HashRouter basename="/">
+				<BrowserRouter basename="/">
 					<App />
-				</HashRouter>
+				</BrowserRouter>
 			</Provider>
 		</AppContainer>	
 		, document.getElementById("root")
@@ -35,9 +35,9 @@ if (process.env.NODE_ENV != 'production') {
 } else {
 	render(
 		<Provider store={store}>
-			<HashRouter basename="/">
+			<BrowserRouter basename="/">
 				<App />
-			</HashRouter>
+			</BrowserRouter>
 		</Provider>
 		, document.getElementById("root")
 	)

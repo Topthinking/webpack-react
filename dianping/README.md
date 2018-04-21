@@ -32,7 +32,7 @@ $ npm run build （发布生产版本，对代码进行混淆压缩，提取公�
 ```
 
 ## 演示
-[demo](http://topthinking.github.io/dianping/)（请用chrome的手机模式预览）
+[demo](http://dianping.sunyangjie.com/)（请用chrome的手机模式预览）
 
 ### 移动端扫描下方二维码
 ![](./doc/images/demo_code.png)

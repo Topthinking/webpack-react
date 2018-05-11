@@ -5,22 +5,20 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 	entry:[
 		'react-hot-loader/patch',
-    	'webpack-hot-middleware/client?path=/webpack-hmr&timeout=2000&quiet=true&reload=true&overlay=false',
+    'webpack-hot-middleware/client?path=/webpack-hmr&timeout=2000&quiet=true&reload=true&overlay=false',
 		'./src/main.js'
 	],
 	output:{
 		filename: '[name].js',
 		publicPath: "/",
 	},
-	resolve:{
-		extensions:['.js','.jsx']
-	},
+	mode: process.env.NODE_ENV,
 	module:{
-		loaders:[
+		rules:[
 			{
-				test:/\.(js|jsx)$/,
+				test:/\.js$/,
 				exclude:/node_modules/,
-				loader:'babel-loader'
+				use:'babel-loader'
 			}
 		]
 	},

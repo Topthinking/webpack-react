@@ -5,9 +5,10 @@ const webpackConfig = require('./webpack.config')
 const mock  = require('./mock')
 const port = 8080
 const app = express()
-const watch = require('es-style/watch').default
+const watch = require('es-style/watch')
 
-const compiler = watch(webpack(webpackConfig),app)
+const compiler = watch(webpack(webpackConfig), app)
+
 //const mockServer = require('../mock/server')
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
@@ -24,7 +25,6 @@ const hotMiddleware = require('webpack-hot-middleware')(compiler, {
 compiler.plugin('compilation', function (compilation) {
   compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
     hotMiddleware.publish({ action: 'reload' })
-    cb()
   })
 })
 

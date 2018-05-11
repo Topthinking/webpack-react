@@ -5,19 +5,19 @@ const webpackConfig = require('./webpack.config')
 const mock  = require('./mock')
 const port = 8080
 const app = express()
-const compiler = webpack(webpackConfig)
+const watch = require('es-style/watch').default
+
+const compiler = watch(webpack(webpackConfig),app)
 //const mockServer = require('../mock/server')
 
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,
-  noInfo: true,
-  quiet: true,
-  clientLogLevel: 'warning'
+  logLevel: 'error',
 })
 
 const hotMiddleware = require('webpack-hot-middleware')(compiler, {
+  noInfo: true,
   path: '/webpack-hmr',
-  log: false,
   heartbeat: 2500
 })
 

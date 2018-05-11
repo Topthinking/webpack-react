@@ -14,6 +14,7 @@ $ cd webpack-react
 >	### [仿大众点评项目](./dianping/README.md)
 
 >	### [dva学习案例](./dva/README.md)
+  - `webpack 4` `react 16.3.2` `es-style`
 
 
 ## 提交记录

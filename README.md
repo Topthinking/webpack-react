@@ -22,9 +22,12 @@ $ cd webpack-react
 ```
 修改文件夹结构，整合React项目，呈现多个项目组的形式
 ```
+
 ## 说明
 
 >  本项目主要理解 react 和 redux 的原理，以及 react + redux 之间的配合方式，同时对react-router4进行由浅入深的学习和探究，欢迎大家一起学习新的路由方式
+
+>  dva项目采用[`es-style`](https://github.com/Topthinking/es-style)对静态资源进行快速构建
 
 >  如果觉得不错的话，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
 
